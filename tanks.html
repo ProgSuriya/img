@@ -1,0 +1,666 @@
+
+<html>
+    <head>
+        <title>TAS-SCADA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+      <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightblue;
+}
+
+
+
+.top-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 110px;
+    background-color: white;
+    
+}
+
+.title{
+    position: absolute;
+    left: 700px;
+    top: 0px;
+}
+
+.vertical-line1 {
+    border-left: 1px solid black;
+    height: 110px;
+    position: absolute;
+    left: 155px;
+}
+
+.horizontal-line1 {
+    border-top: 1px solid black;
+    width: 1920px;
+    position: absolute;
+    top: 110px;
+}
+
+.time {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.date {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+.vertical-line2 {
+    border-left: 1px solid black;
+    height: 110px;
+    position: absolute;
+    right: 215px;
+    top: 0;
+}
+
+.title1{
+    position: absolute;
+    left: 650px;
+    top: 130px;
+}
+
+.iocl-icon{
+    position: absolute;
+    left: 750px;
+    top: 300px;
+}
+
+
+.bottom-container {
+    position: absolute;
+    top: 809px;
+    left: 0;
+    width: 1920px;
+    height: 110px;
+    background-color: white;
+    
+}
+
+.home-btn{
+    color: white;
+    background-color: black;
+    height: 60px;
+    width: 90px;
+    position: absolute;
+    border-radius: 10px;
+    top: 20px;
+    left: 700px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tk-btn{
+    color: white;
+    background-color: black;
+    height: 60px;
+    width: 90px;
+    position: absolute;
+    border-radius: 10px;
+    top: 20px;
+    left: 800px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.sap-reports-btn{
+    color: white;
+    background-color: black;
+    height: 60px;
+    width: 120px;
+    position: absolute;
+    border-radius: 10px;
+    top: 20px;
+    left: 900px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.reports-btn{
+    color: white;
+    background-color: black;
+    height: 60px;
+    width: 120px;
+    position: absolute;
+    border-radius: 10px;
+    top: 20px;
+    left: 1030px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.window-name-sap{
+    position: absolute;
+    left: 900px;
+    top: 50px;
+}
+
+
+.window-name-sap-reports{
+    position: absolute;
+    left: 850px;
+    top: 50px;
+}
+
+.window-name-reports{
+    position: absolute;
+    left: 850px;
+    top: 50px;
+}
+
+.window-name-tanks{
+    position: absolute;
+    left: 850px;
+    top: 50px;
+}
+
+
+.sap-report-exp{
+    position: absolute;
+    top: 115px;
+    left: 10px;
+    width: 1900px;
+    height: 670px;
+}
+
+.report-exp{
+    position: absolute;
+    top: 115px;
+    left: 10px;
+    width: 1900px;
+    height: 670px;
+}
+
+.tank-name-1{
+    position: absolute;
+    top: 100px;
+    left: 250px;
+}
+
+.tank-name-2{
+    position: absolute;
+    top: 100px;
+    left: 700px;
+}
+
+.tank-name-3{
+    position: absolute;
+    top: 100px;
+    left: 1150px;
+}
+
+.tank-name-4{
+    position: absolute;
+    top: 100px;
+    left: 1600px;
+}
+
+.tank-img-1{
+    position: absolute;
+    top: 150px;
+    left: 175px;
+}
+.tank-img-2{
+    position: absolute;
+    top: 150px;
+    left: 625px;
+}
+.tank-img-3{
+    position: absolute;
+    top: 150px;
+    left: 1075px;
+}
+.tank-img-4{
+    position: absolute;
+    top: 150px;
+    left: 1530px;
+}
+
+.input-container-1{
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+
+.input-container-2{
+    position: absolute;
+    top: 450px;
+    left: 540px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+
+
+.input-container-3{
+    position: absolute;
+    top: 450px;
+    left: 1000px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+
+
+.input-container-4{
+    position: absolute;
+    top: 450px;
+    left: 1460px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+.primary-level{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.secondary-level{
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    font-size: 20px;
+}
+
+
+.liqt-level{
+    position: absolute;
+    top: 85px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.vapt-level{
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.pressure-level{
+    position: absolute;
+    top: 175px;
+    left: 20px;
+    font-size: 20px;
+}
+
+
+.mainten1-on-btn{
+    position: absolute;
+    top: 720px;
+    left: 100px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.mainten1-off-btn{
+    position: absolute;
+    top: 720px;
+    left: 100px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.status-sphere1-btn{
+    position: absolute;
+    top: 720px;
+    left: 180px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.sap-1-btn{
+    position: absolute;
+    top: 720px;
+    left: 340px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+
+
+.mainten2-on-btn{
+    position: absolute;
+    top: 720px;
+    left: 550px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.mainten2-off-btn{
+    position: absolute;
+    top: 720px;
+    left: 550px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.status-sphere2-btn{
+    position: absolute;
+    top: 720px;
+    left: 630px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.sap-2-btn{
+    position: absolute;
+    top: 720px;
+    left: 790px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+
+.mainten3-on-btn{
+    position: absolute;
+    top: 720px;
+    left: 1000px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.mainten3-off-btn{
+    position: absolute;
+    top: 720px;
+    left: 1000px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.status-sphere3-btn{
+    position: absolute;
+    top: 720px;
+    left: 1080px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.sap-3-btn{
+    position: absolute;
+    top: 720px;
+    left: 1240px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+
+
+.mainten4-on-btn{
+    position: absolute;
+    top: 720px;
+    left: 1470px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.mainten4-off-btn{
+    position: absolute;
+    top: 720px;
+    left: 1470px;
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+
+.status-sphere4-btn{
+    position: absolute;
+    top: 720px;
+    left: 1550px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.sap-4-btn{
+    position: absolute;
+    top: 720px;
+    left: 1710px;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: lightyellow;
+}
+      </style>
+      <body>
+        <div class="top-container">
+            <div class="vertical-line1"></div>
+            <div class="horizontal-line1"></div>
+            <img src="icon-tas.png" alt="tas-icon" height="110" width="150">
+            <h1 class="title">WELCOME TO TAS-SCADA</h1>
+            <h2 class="window-name-tanks">TANKS</h2>
+            <h2 id="time" class="time"></h2>
+            <h2 id="date" class="date"></h2>
+            <div class="vertical-line2"></div>
+        </div>
+        <div class="content-tanks">
+            <div class="tank1">
+                <h1 class="tank-name-1">TANK 1</h1>
+                <img src="tank.png" class="tank-img-1" alt="tank-img">
+                <div class="input-container-1">
+                    <h4 class="primary-level">PRIMARY LEVEL</h4>
+                    <h4 style="position: absolute; top: 5px; right: 100px;" id="floatValue1">#####</h4>
+                    <h4 style="position: absolute; top: 5px; right: 30px;">CM</h4>
+                    <h4 class="secondary-level">SECONDARY LEVEL</h4>
+                    <h4 id="tank1_params[1]" style="position: absolute; top: 45px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 45px; right: 30px;">CM</h4>
+                    <h4 class="liqt-level">LIQ.TEMP</h4>
+                    <h4 id="tank1_params[2]" style="position: absolute; top: 85px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 85px; right: 90px;">°C</h4>
+                    <h4 class="vapt-level">VAP.TEMP</h4>
+                    <h4 id="tank1_params[3]" style="position: absolute; top: 130px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 130px; right: 90px;">°C</h4>
+                    <h4 class="pressure-level">PRESSURE</h4>
+                    <h4 id="tank1_params[4]" style="position: absolute; top: 175px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 175px; right: 60px;">Kg/cm²</h4>
+                </div>
+                <div class="tk1-btns-btm">
+                    <button class="mainten1-on-btn" onclick="tank1_mainten_on()">ON</button>
+                    <button class="mainten1-off-btn" onclick="tank1_mainten_off()">OFF</button>
+                    <button class="status-sphere1-btn" id="status-sphere1-btn">SPHERE</button>
+                    <button class="sap-1-btn" id="sap-1-btn">SAP</button>
+                </div>
+            </div>
+            <div class="tank2">
+                <h1 class="tank-name-2">TANK 2</h1>
+                <img src="tank.png" class="tank-img-2" alt="tank-img">
+                <div class="input-container-2">
+                    <h4 class="primary-level">PRIMARY LEVEL</h4>
+                    <h4 id="tank2_params[0]" style="position: absolute; top: 5px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 5px; right: 30px;">CM</h4>
+                    <h4 class="secondary-level">SECONDARY LEVEL</h4>
+                    <h4 id="tank2_params[1]" style="position: absolute; top: 45px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 45px; right: 30px;">CM</h4>
+                    <h4 class="liqt-level">LIQ.TEMP</h4>
+                    <h4 id="tank2_params[2]" style="position: absolute; top: 85px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 85px; right: 90px;">°C</h4>
+                    <h4 class="vapt-level">VAP.TEMP</h4>
+                    <h4 id="tank2_params[3]" style="position: absolute; top: 130px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 130px; right: 90px;">°C</h4>
+                    <h4 class="pressure-level">PRESSURE</h4>
+                    <h4 id="tank2_params[4]" style="position: absolute; top: 175px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 175px; right: 60px;">Kg/cm²</h4>
+                </div>
+                <div class="tk2-btns-btm">
+                    <button class="mainten2-on-btn" onclick="tank1_mainten_on()">ON</button>
+                    <button class="mainten2-off-btn" onclick="tank1_mainten_off()">OFF</button>
+                    <button class="status-sphere2-btn" id="status-sphere2-btn">SPHERE</button>
+                    <button class="sap-2-btn" id="sap-2-btn">SAP</button>
+                </div>
+            </div>
+            <div class="tank3">
+                <h1 class="tank-name-3">TANK 3</h1>
+                <img src="tank.png" class="tank-img-3" alt="tank-img">
+                <div class="input-container-3">
+                    <h4 class="primary-level">PRIMARY LEVEL</h4>
+                    <h4 id="tank3_params[0]" style="position: absolute; top: 5px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 5px; right: 30px;">CM</h4>
+                    <h4 class="secondary-level">SECONDARY LEVEL</h4>
+                    <h4 id="tank3_params[1]" style="position: absolute; top: 45px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 45px; right: 30px;">CM</h4>
+                    <h4 class="liqt-level">LIQ.TEMP</h4>
+                    <h4 id="tank3_params[2]" style="position: absolute; top: 85px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 85px; right: 90px;">°C</h4>
+                    <h4 class="vapt-level">VAP.TEMP</h4>
+                    <h4 id="tank3_params[3]" style="position: absolute; top: 130px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 130px; right: 90px;">°C</h4>
+                    <h4 class="pressure-level">PRESSURE</h4>
+                    <h4 id="tank3_params[4]" style="position: absolute; top: 175px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 175px; right: 60px;">Kg/cm²</h4>
+                </div>
+                <div class="tk2-btns-btm">
+                    <button class="mainten3-on-btn" onclick="tank1_mainten_on()">ON</button>
+                    <button class="mainten3-off-btn" onclick="tank1_mainten_off()">OFF</button>
+                    <button class="status-sphere3-btn" id="status-sphere3-btn">SPHERE</button>
+                    <button class="sap-3-btn" id="sap-3-btn">SAP</button>
+                </div>
+            </div>
+            <div class="tank4">
+                <h1 class="tank-name-4">TANK 4</h1>
+                <img src="tank.png" class="tank-img-4" alt="tank-img">
+                <div class="input-container-4">
+                    <h4 class="primary-level">PRIMARY LEVEL</h4>
+                    <h4 id="tank4_params[0]" style="position: absolute; top: 5px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 5px; right: 30px;">CM</h4>
+                    <h4 class="secondary-level">SECONDARY LEVEL</h4>
+                    <h4 id="tank4_params[1]" style="position: absolute; top: 45px; right: 100px;">#####</h4>
+                    <h4 style="position: absolute; top: 45px; right: 30px;">CM</h4>
+                    <h4 class="liqt-level">LIQ.TEMP</h4>
+                    <h4 id="tank4_params[2]" style="position: absolute; top: 85px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 85px; right: 90px;">°C</h4>
+                    <h4 class="vapt-level">VAP.TEMP</h4>
+                    <h4 id="tank4_params[3]" style="position: absolute; top: 130px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 130px; right: 90px;">°C</h4>
+                    <h4 class="pressure-level">PRESSURE</h4>
+                    <h4 id="tank4_params[4]" style="position: absolute; top: 175px; right: 150px;">#####</h4>
+                    <h4 style="position: absolute; top: 175px; right: 60px;">Kg/cm²</h4>
+                </div>
+                <div class="tk4-btns-btm">
+                    <button class="mainten4-on-btn" onclick="tank1_mainten_on()">ON</button>
+                    <button class="mainten4-off-btn" onclick="tank1_mainten_off()">OFF</button>
+                    <button class="status-sphere4-btn" id="status-sphere4-btn">SPHERE</button>
+                    <button class="sap-4-btn" id="sap-4-btn">SAP</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-container">
+            <div class="btns">
+                <button class="home-btn" onclick="home_btn()">HOME</button>
+                <button class="tk-btn" onclick="tanks_btn()">TANKS</button>
+                
+                <button class="sap-reports-btn" onclick="sap_reports_btn()">SAP REPORTS</button>
+                <button class="reports-btn" onclick="reports_btn()">REPORTS</button>
+            </div>
+      </body>
+      <script>
+        function redirect(){
+            console.log("redirect");
+            
+
+            fetch("http://localhost:8082/data")
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Float Value:', data.floatValue);
+                document.getElementById('floatValue1').innerHTML = Math.round(data.floatValue * 1000) / 1000;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        
+        
+        }
+        setInterval(redirect, 10000);
+      </script>
+</html>
